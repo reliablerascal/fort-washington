@@ -16,11 +16,6 @@ var config = {
     theme: 'light',
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
-    title: 'DRAFT: The Uneasy Entry to a Peaceful Fortress',
-    subtitle: 'Fort Washington Park provides an escape from urban life, but navigating to the park around rail and automotive thruways reveals a patchwork of unfinished city plans.',
-    byline: 'By Rob Reid | 29 September',
-    footer: 'See <a href="https://github.com/reliablerascal/fort-washington-access">GitHub repository</a> for methodology and data.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
-    leadPhoto: './images/wash_park_scene_without_ppl.jpg',
     chapters: [
         {
             id: 'header-photo',
@@ -97,13 +92,42 @@ var config = {
         
         
         {
+            id: 'park-bbq',
+            alignment: 'fully',
+            hidden: false,
+            //displayMarker: false, //created this attribute manually RR 8/9/23
+            //title: '',
+            image: './images/bbq.jpg',
+            description: 'Barbecuers and picnickers share the park\'s dirt paths, paved trails, and fields...',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [ 
+                //{layer: 'nj-blocker', opacity:0.75},
+                //{layer: 'park-fort-wash', opacity:1},
+                {layer: 'mapbox-satellite', opacity:0} 
+            ],
+            onChapterExit: [
+                //{layer: 'park-fort-wash', opacity:0}
+            ]
+        },
+        
+        
+        
+        {
             id: 'park-soccer',
             alignment: 'fully',
             hidden: false,
             //displayMarker: false, //created this attribute manually RR 8/9/23
             //title: '',
             image: './images/00x_fort_wash_soccer.jpg',
-            description: 'Barbecuers, pedestrians, and athletes share the park\'s dirt paths, paved trails, and athletic fields.',
+            description: '...with solitary bikers and runners as well as teams of basketball, volleyball, and soccer players.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -132,7 +156,7 @@ var config = {
             //displayMarker: false, //created this attribute manually RR 8/9/23
             //title: '',
             image: './images/park_sisyphus.jpg',
-            description: 'The riverfront trail follows the Hudson\'s rocky shoreline, passing an enigmatic art exhibit known as the Sisyphus Stones. It\'s the work of a persistent Albanian immigrant who has <a href="https://www.nytimes.com/2017/09/14/nyregion/a-mystery-solved-why-the-sisyphus-stones-rise-and-tumble.html" target="_blank">repeatedly reconstructed the stony figures</a> after they\'ve been vandalized.',
+            description: 'The riverfront trail follows the Hudson\'s rocky shoreline, passing an enigmatic art exhibit known as the Sisyphus Stones- the work of a persistent Albanian immigrant who\'s <a href="https://www.nytimes.com/2017/09/14/nyregion/a-mystery-solved-why-the-sisyphus-stones-rise-and-tumble.html" target="_blank">repeatedly reconstructed the stony figures</a> after they\'ve been vandalized.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -155,13 +179,13 @@ var config = {
         
         
         {
-            id: 'park-gwb',
+            id: 'park-little-red',
             alignment: 'fully',
             hidden: false,
             //displayMarker: false, //created this attribute manually RR 8/9/23
             //title: '',
-            image: './images/fort_washington_park-1280-960.jpg',
-            description: 'The park widens at its northern end, offering views of the George Washington Bridge and the New Jersey Palisades beyond.',
+            image: './images/little-red.jpg',
+            description: 'A century-old lighthouse, famously <a href="https://www.hrmm.org/uploads/2/6/3/3/26336013/children_helped_save_a_lighthouse_2000.pdf" target="_blank">saved by children from demolition</a>, stands under the George Washington Bridge.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -189,7 +213,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/entry-158.jpg',
-            description: 'Pedestrians and cyclists commonly enter the southern end of the park at 158th under Riverside Drive just past Trinity Cemetery...',
+            description: 'Despite the park\'s size, access is fairly limited. Pedestrians and cyclists commonly enter the southern end of the park at 158th under Riverside Drive just past Trinity Cemetery...',
             location: {
                 center: [-73.9489, 40.8366],
                 zoom: 14.00,
@@ -228,6 +252,91 @@ var config = {
             //callback: 'greenDots',
             onChapterEnter: [
                 {layer: 'path-main', opacity:1}
+            ],
+            onChapterExit: [
+            ]
+        },
+        
+        
+        
+        {
+            id: 'secret-paths-overview-2',
+            alignment: 'left',
+            hidden: false,
+            description: 'A warren of lesser-known paths provides some indirect access to the park at 165th and 176th, but the 165th lacks a crosswalk...and 176th desolate (show 2x pictures)',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 15.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'path-165th', opacity:1},
+                {layer: 'path-176th', opacity:1},
+                {layer: 'path-dyckman', opacity:0.3},
+                {layer: 'path-main', opacity:0.3},
+                {layer: 'mapbox-satellite', opacity:0},
+                {layer: 'social-trail', opacity:1}
+            ],
+            onChapterExit: [
+            ]
+        },
+        
+        
+        
+        {
+            id: 'access-easy-182',
+            alignment: 'left',
+            hidden: false,
+            //title: '',
+            image: './images/entry-182.jpg',
+            description: 'More commonly, a bridge crosses the expressway at 182nd street.',
+            location: {
+                center: [-73.9412, 40.8524],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'easeTo',
+            rotateAnimation: false,
+            //callback: 'hideDots',
+            onChapterEnter: [
+                {layer: '182-entry', opacity:1},
+                //{layer: 'park-fort-wash', opacity:1},
+                {layer: 'path-main', opacity:1}
+            ],
+            onChapterExit: [
+                // {layer: 'park-fort-wash', opacity:0},
+                {layer: '182-entry', opacity:0}
+            ]
+        },
+        
+        
+        
+        {
+            id: 'access-points-north',
+            alignment: 'left',
+            hidden: false,
+            description: 'But there\'s no official riverfront trail north of the George Washington Bridge connecting to the trail headed south from Dyckman Street, 1.5 miles away.',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 15.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {layer: 'path-165th', opacity:1},
+                {layer: 'path-176th', opacity:1},
+                {layer: 'path-dyckman', opacity:0.3},
+                {layer: 'path-main', opacity:0.3},
+                {layer: 'mapbox-satellite', opacity:0},
+                {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: [
             ]
@@ -293,60 +402,7 @@ var config = {
         
         
         
-        {
-            id: 'access-easy-182',
-            alignment: 'left',
-            hidden: false,
-            //title: '',
-            image: './images/entry-182.jpg',
-            description: 'A bridge crosses over the parkway and into the city at 182nd street.',
-            location: {
-                center: [-73.9412, 40.8524],
-                zoom: 14.00,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'easeTo',
-            rotateAnimation: false,
-            //callback: 'hideDots',
-            onChapterEnter: [
-                {layer: '182-entry', opacity:1},
-                //{layer: 'park-fort-wash', opacity:1},
-                {layer: 'path-main', opacity:1}
-            ],
-            onChapterExit: [
-                // {layer: 'park-fort-wash', opacity:0},
-                {layer: '182-entry', opacity:0}
-            ]
-        },
         
-        
-        
-        {
-            id: 'access-points-north',
-            alignment: 'left',
-            hidden: false,
-            description: 'But there\'s no official riverfront trail north of the George Washington Bridge connecting to the trail headed south from Dyckman Street, 1.5 miles away.',
-            location: {
-                center: [-73.94616, 40.84513],
-                zoom: 15.00,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {layer: 'path-165th', opacity:1},
-                {layer: 'path-176th', opacity:1},
-                {layer: 'path-dyckman', opacity:0.3},
-                {layer: 'path-main', opacity:0.3},
-                {layer: 'mapbox-satellite', opacity:0},
-                {layer: 'social-trail', opacity:1}
-            ],
-            onChapterExit: [
-            ]
-        },
         
         
         
@@ -588,115 +644,115 @@ var config = {
                 {layer: 'social-entry-north', opacity:0}
             ]
         },
-        {
-            id: 'C-social-Guthrie2',
-            alignment: 'left',
-            hidden: false,
-            //title: '',
-            //image: './images/009_social_entry_south.jpeg',
-            description: 'As I went walking I saw a sign there,<br>And on the sign it said "No Trespassing."<br>But on the other side it didn\'t say nothing.<br>That side was made for you and me.<br>-Arlo Guthrie',
-            location: {
-                center: [-73.94161, 40.85336],
-                zoom: 15.07,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {layer: 'path-dyckman', opacity:1},
-                {layer: 'social-trail', opacity:1}
-            ],
-            onChapterExit: []
-        },
-        {
-            id: 'trail-plans',
-            alignment: 'fully',
-            hidden: false,
-            //title: '',
-            //image: './images/014_fort_washington_park.jpeg',
-            description: 'Discussion about continuing the riverfront path dates back at least a century. In 1917, the city <a href="https://www.forttryonparktrust.org/wp-content/uploads/2017/05/1983FortTryonPark-LPC.pdf" target="_blank">spurned John D. Rockefeller Jr.\'s conditional offer</a> of the land that\'s now Fort Tryon park. For financial reasons, the city could not honor Rockefeller\'s condition that the park be connected to Fort Washington Park.<p>More recently, the city estimated it would cost $22 million to essentially <a href="https://www.nytimes.com/2014/08/15/nyregion/new-riverside-trail-goes-only-so-far.html" target="_blank">transform the social trail to an official trail</a>- a cost elevated by a need for landfill supporting a paved, bike-friendly trail.',
-            location: {
-                center: [-73.94161, 40.85336],
-                zoom: 14,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                //{layer: 'park-fort-wash', opacity:1},
-                {layer: 'park-tryon', opacity:0.75},
-                {layer: 'path-main', opacity:1},
-                {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-165th', opacity:1},
-                {layer: 'path-176th', opacity:1},
-                {layer: 'social-trail', opacity:1}
-            ],
-            onChapterExit: [
-                //{layer: 'park-fort-wash', opacity:0},
-                {layer: 'park-tryon', opacity:0}, 
-            ]
-        },
+        // {
+        //     id: 'C-social-Guthrie2',
+        //     alignment: 'left',
+        //     hidden: false,
+        //     //title: '',
+        //     //image: './images/009_social_entry_south.jpeg',
+        //     description: 'As I went walking I saw a sign there,<br>And on the sign it said "No Trespassing."<br>But on the other side it didn\'t say nothing.<br>That side was made for you and me.<br>-Arlo Guthrie',
+        //     location: {
+        //         center: [-73.94161, 40.85336],
+        //         zoom: 15.07,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'flyTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {layer: 'path-dyckman', opacity:1},
+        //         {layer: 'social-trail', opacity:1}
+        //     ],
+        //     onChapterExit: []
+        // },
+        // {
+        //     id: 'trail-plans',
+        //     alignment: 'fully',
+        //     hidden: false,
+        //     //title: '',
+        //     //image: './images/014_fort_washington_park.jpeg',
+        //     description: 'Discussion about continuing the riverfront path dates back at least a century. In 1917, the city <a href="https://www.forttryonparktrust.org/wp-content/uploads/2017/05/1983FortTryonPark-LPC.pdf" target="_blank">spurned John D. Rockefeller Jr.\'s conditional offer</a> of the land that\'s now Fort Tryon park. For financial reasons, the city could not honor Rockefeller\'s condition that the park be connected to Fort Washington Park.<p>More recently, the city estimated it would cost $22 million to essentially <a href="https://www.nytimes.com/2014/08/15/nyregion/new-riverside-trail-goes-only-so-far.html" target="_blank">transform the social trail to an official trail</a>- a cost elevated by a need for landfill supporting a paved, bike-friendly trail.',
+        //     location: {
+        //         center: [-73.94161, 40.85336],
+        //         zoom: 14,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'flyTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         //{layer: 'park-fort-wash', opacity:1},
+        //         {layer: 'park-tryon', opacity:0.75},
+        //         {layer: 'path-main', opacity:1},
+        //         {layer: 'path-dyckman', opacity:1},
+        //         {layer: 'path-165th', opacity:1},
+        //         {layer: 'path-176th', opacity:1},
+        //         {layer: 'social-trail', opacity:1}
+        //     ],
+        //     onChapterExit: [
+        //         //{layer: 'park-fort-wash', opacity:0},
+        //         {layer: 'park-tryon', opacity:0}, 
+        //     ]
+        // },
 
 
 
-        {
-            id: '2017-concept',
-            alignment: 'fully',
-            hidden: false,
-            //title: '',
-            image: './images/fort-washington-park-north-conceptual.png',
-            description: 'As recently as 2017, the nonprofit New York Economic Development Corporation conceptualized <a href="https://edc.nyc/sites/default/files/filemanager/MWG/ManhattanGreenway_book.pdf" target="_blank">development of a trail built above the river</a>, promising community engagement in the planning process only "as funding becomes available."',
-            location: {
-                center: [-73.94616, 40.84513],
-                zoom: 14.00,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {layer: 'path-main', opacity:1},
-                {layer: 'social-trail', opacity:1},
-                {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-165th', opacity:1},
-                {layer: 'path-176th', opacity:1}
-            ],
-            onChapterExit: [
-            ]
-        },
+        // {
+        //     id: '2017-concept',
+        //     alignment: 'fully',
+        //     hidden: false,
+        //     //title: '',
+        //     image: './images/fort-washington-park-north-conceptual.png',
+        //     description: 'As recently as 2017, the nonprofit New York Economic Development Corporation conceptualized <a href="https://edc.nyc/sites/default/files/filemanager/MWG/ManhattanGreenway_book.pdf" target="_blank">development of a trail built above the river</a>, promising community engagement in the planning process only "as funding becomes available."',
+        //     location: {
+        //         center: [-73.94616, 40.84513],
+        //         zoom: 14.00,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'flyTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {layer: 'path-main', opacity:1},
+        //         {layer: 'social-trail', opacity:1},
+        //         {layer: 'path-dyckman', opacity:1},
+        //         {layer: 'path-165th', opacity:1},
+        //         {layer: 'path-176th', opacity:1}
+        //     ],
+        //     onChapterExit: [
+        //     ]
+        // },
         
 
-        {
-            id: 'conclusion',
-            alignment: 'fully',
-            hidden: false,
-            //title: '',
-            image: './images/014_fort_washington_park.jpeg',
-            description: 'To this day, limited crossings over conflicting expressway and rail routes restricts access to Fort Washington Park. Perhaps some day the city will invest in improving this access. For now, the park\'s isolation may be part of the its charm.',
-            location: {
-                center: [-73.94616, 40.84513],
-                zoom: 14.00,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {layer: 'path-main', opacity:1},
-                {layer: 'social-trail', opacity:1},
-                {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-165th', opacity:1},
-                {layer: 'path-176th', opacity:1}
-            ],
-            onChapterExit: [
-            ]
-        },
+        // {
+        //     id: 'conclusion',
+        //     alignment: 'fully',
+        //     hidden: false,
+        //     //title: '',
+        //     image: './images/014_fort_washington_park.jpeg',
+        //     description: 'To this day, limited crossings over conflicting expressway and rail routes restricts access to Fort Washington Park. Perhaps some day the city will invest in improving this access. For now, the park\'s isolation may be part of the its charm.',
+        //     location: {
+        //         center: [-73.94616, 40.84513],
+        //         zoom: 14.00,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'flyTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {layer: 'path-main', opacity:1},
+        //         {layer: 'social-trail', opacity:1},
+        //         {layer: 'path-dyckman', opacity:1},
+        //         {layer: 'path-165th', opacity:1},
+        //         {layer: 'path-176th', opacity:1}
+        //     ],
+        //     onChapterExit: [
+        //     ]
+        // },
 
 /////////////////////////////////
 //
@@ -710,8 +766,9 @@ var config = {
             id: 'appendix-spacer',
             alignment: 'center',
             hidden: true,
-            title: 'Appendix/ Outtakes',
+            //title: 'Appendix/ Outtakes',
             //image: './images/002_topographical_history.jpg',
+            description: '[[[APPENDIX/ OUTTAKES]]]',
             //description: '...or from points further south along the riverside trail extending to Manhattan\'s southern tip at The Battery.',
             location: {
                 center: [-73.9489, 40.8366],
@@ -731,6 +788,35 @@ var config = {
 
 
 
+        {
+            id: 'park-gwb',
+            alignment: 'fully',
+            hidden: false,
+            //displayMarker: false, //created this attribute manually RR 8/9/23
+            //title: '',
+            image: './images/fort_washington_park-1280-960.jpg',
+            description: 'The park widens at its northern end, offering views of the George Washington Bridge and the New Jersey Palisades beyond.',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [ 
+                //{layer: 'nj-blocker', opacity:0.75},
+                //{layer: 'park-fort-wash', opacity:1},
+                {layer: 'mapbox-satellite', opacity:0} 
+            ],
+            onChapterExit: [
+                //{layer: 'park-fort-wash', opacity:0}
+            ]
+        },
+        
+        
+        
         {
             id: 'appendix-label',
             alignment: 'center',

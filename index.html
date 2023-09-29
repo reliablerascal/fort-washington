@@ -5,7 +5,7 @@
     <title>Fort Washington</title>
     
     <!---hpmoon style is completely ignored-->
-    <link rel="stylesheet" href="../style/gitrascal.css"> 
+    <link rel="stylesheet" href="../style/gitrascal_simple.css"> 
     
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/mapbox/assembly/publisher-staging/src/svgs/mapbox.svg">
@@ -24,31 +24,10 @@
             color:#E3AE50;
         }
         #map {
-            top:0;
-            height: 100vh;
-            width:100vw;
             position: sticky;
-        }
-        /* #map {
-            top:0;
-            height: 100vh;
-            width:100vw;
-            position: fixed;
-        } */
-        #mapInset {
-            bottom:50px;
-            right:30px;
-            height: 180px;
-            width:250px;
-            max-width:100%;
-            position: fixed;
-            z-index: 1;
-            opacity: 1;
-            transition: opacity 0.5s ease-in-out;
-            pointer-events: none;
-        }
-        #mapInset .mapboxgl-ctrl-bottom-left{
-            display: none;
+            top: 0;
+            height:100vh;  
+            width:100%;
         }
         @media (max-width: 500px) {
             #mapInset {
@@ -81,12 +60,13 @@
             padding-top: 10vh;
             padding-bottom: 10vh;
         }
-        /* @media (max-width: 750px) {
+       /* this media query had been commented out in template */
+        @media (max-width: 750px) {
             #features {
                 width: 90vw;
                 margin: 0 auto;
             }
-        } */
+        }
         .hidden {
             visibility: hidden;
         }
@@ -178,35 +158,34 @@
 
     </td><td width = 50></td></tr></table>
 </div>
-        
+   
 <!----------------------->
 <!---    THE STORY     -->
 <!----------------------->
 <!-- STORY contains narrative corresponding to the map as coded in config.js-->
 <div id="map"></div>
 <div id="story"></div>
-</main>
+</main> 
 
 
 <!----------------------->
 <!---    FOOTER     -->
 <!----------------------->
-<!-- <footer>
+<footer>
     <div id="outro">
         <table width = 100%>
             <tr><td colspan=3>&nbsp;</td></tr>
             <td width = 50></td>
             <td>
-                <div style="max-width: 800px; margin:0 auto; text-align: left; line-height: 25px;"> 
-                <p>Building on this and other plans, Friends of Big Marsh published the <a href="https://bigmarsh.org/2023/07/14/east-side-community-connections-plan/" target="_blank">East Side Neighborhood Connectivity Plan</a>, which delves into a concrete feasibility plan and provides specific recommendations for how to make that work. As <a href="https://chi.streetsblog.org/2023/07/14/new-east-side-connectivity-plan-would-upgrade-condition-for-biking-to-big-marsh" target="_blank">Streetsblog noted in July</a>, that plan is a key step in building political will necessary to secure funding for bike and pedestrian transit improvements.
+<div style="max-width: 800px; margin:0 auto; text-align: left; line-height: 25px;"> 
+                
+    <p>See <a href="https://github.com/reliablerascal/fort-washington">GitHub repository</a> for methodology and data. This work was adapted in part from <a href="https://github.com/mapbox/storytelling" target="_blank">Chris Whong's Mapbox Storytelling</a> template.
 
-<p>While funding requirements are significant, improved access in the region would help area residents and visitors tap into an arguably greater wealth: the area’s abundant park space.
 
-    <p><em>Streetsblog Chicago published a <a href="https://chi.streetsblog.org/2023/09/11/how-can-we-better-link-the-far-southeast-sides-disconnected-network-of-public-parks" target="_blank">version of this story on September 11, 2023.</a></em>
-        </div>
+</div>
     </td><td width = 50></td></tr></table>
 </div>
-</footer> -->
+</footer>
 
 
 
@@ -335,19 +314,19 @@ config.chapters.forEach((record, idx) => {
 
 story.appendChild(features);
 
-var footer = document.createElement('div');
+// var footer = document.createElement('div');
 
-if (config.footer) {
-    var footerText = document.createElement('p');
-    footerText.innerHTML = config.footer;
-    footer.appendChild(footerText);
-}
+// if (config.footer) {
+//     var footerText = document.createElement('p');
+//     footerText.innerHTML = config.footer;
+//     footer.appendChild(footerText);
+// }
 
-if (footer.innerText.length > 0) {
-    footer.classList.add(config.theme);
-    footer.setAttribute('id', 'footer');
-    story.appendChild(footer);
-}
+// if (footer.innerText.length > 0) {
+//     footer.classList.add(config.theme);
+//     footer.setAttribute('id', 'footer');
+//     story.appendChild(footer);
+// }
 
 mapboxgl.accessToken = config.accessToken;
 
