@@ -18,7 +18,7 @@ var config = {
     auto: false,
     chapters: [
         {
-            id: 'nyc-overhead',
+            id: 'header-photo',
             alignment: 'full',
             hidden: true,
             //title: '',
@@ -39,13 +39,14 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                //{layer: 'nj-blocker', opacity:0},
                 {layer: 'park-tryon', opacity:0},
-                {layer: 'park-fort-wash', opacity:0.5},
+                {layer: 'park-fort-wash', opacity:1},
                 {layer: 'path-dyckman', opacity:0},
                 {layer: 'path-main', opacity:0},
                 {layer: 'path-165th', opacity:0},
                 {layer: 'path-176th', opacity:0},
-                {layer: 'mapbox-satellite', opacity:0},
+                {layer: 'mapbox-satellite', opacity:1},
                 {layer: 'social-dock', opacity:0},
                 {layer: 'social-entry-north', opacity:0},
                 {layer: 'social-entry-south', opacity:0},
@@ -70,35 +71,7 @@ var config = {
             id: 'zoom-to-park',
             alignment: 'fully',
             hidden: false,
-            description: 'The park extends about two and a half miles along the Hudson shoreline in Upper Manhattan, bounded roughly by 158th Street to the south and Dyckman Street to the north.',
-            location: {
-                //center: [-73.94616, 40.84513],
-                center: [-73.94170, 40.85258],
-                zoom: 14.00,
-                pitch: 0.00,
-                bearing: 28.00
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [ 
-                {layer: 'path-main', opacity:0},
-                {layer: 'sisyphus-stones', opacity:0}  
-            ],
-            onChapterExit: [
-            ]
-        },
-        
-        
-        
-        {
-            id: 'park-sisyphus',
-            alignment: 'left',
-            hidden: false,
-            //displayMarker: false, //created this attribute manually RR 8/9/23
-            //title: '',
-            image: './images/park_sisyphus.jpg',
-            description: 'A trail through the park follows the Hudson\'s rocky shoreline, passing an enigmatic art exhibit known as the Sisyphus Stones- the work of a persistent Albanian immigrant who\'s <a href="https://www.nytimes.com/2017/09/14/nyregion/a-mystery-solved-why-the-sisyphus-stones-rise-and-tumble.html" target="_blank">keeps reconstructing the stony figures</a> after every time they\'ve been vandalized.',
+            description: 'The park\'s main section extends about a mile and a half along the Hudson shoreline in Upper Manhattan, from 158th Street just north of Trinity Cemetery to 182nd Street just past the George Washington Bridge.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -109,25 +82,23 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [ 
-                {layer: 'little-red', opacity:0},
-                {layer: 'mapbox-satellite', opacity:0},
-                {layer: 'path-main', opacity:1},
-                {layer: 'sisyphus-stones', opacity:1} 
+                {layer: 'park-fort-wash', opacity:1}  
             ],
             onChapterExit: [
+                //{layer: 'park-fort-wash', opacity:0}
             ]
         },
         
         
         
         {
-            id: 'park-little-red',
-            alignment: 'left',
+            id: 'park-sisyphus',
+            alignment: 'fully',
             hidden: false,
             //displayMarker: false, //created this attribute manually RR 8/9/23
             //title: '',
-            image: './images/little-red.jpg',
-            description: 'A century-old lighthouse stands under the George Washington Bridge. Intended to be torn down by the Coast Guard in 1951, it was famously <a href="https://www.hrmm.org/uploads/2/6/3/3/26336013/children_helped_save_a_lighthouse_2000.pdf" target="_blank">saved by children</a>.',
+            image: './images/park_sisyphus.jpg',
+            description: 'A trail through the park follows the Hudson\'s rocky shoreline, passing an enigmatic art exhibit known as the Sisyphus Stones- the work of a persistent Albanian immigrant who\'s <a href="https://www.nytimes.com/2017/09/14/nyregion/a-mystery-solved-why-the-sisyphus-stones-rise-and-tumble.html" target="_blank">repeatedly reconstructed the stony figures</a> after they\'ve been vandalized.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -139,12 +110,40 @@ var config = {
             callback: '',
             onChapterEnter: [ 
                 //{layer: 'nj-blocker', opacity:0.75},
-                {layer: '158-entry', opacity:0},
-                {layer: 'little-red', opacity:1},
-                {layer: 'mapbox-satellite', opacity:0},
-                {layer: 'sisyphus-stones', opacity:0}  
+                //{layer: 'park-fort-wash', opacity:1},
+                {layer: 'mapbox-satellite', opacity:0} 
             ],
             onChapterExit: [
+                //{layer: 'park-fort-wash', opacity:0}
+            ]
+        },
+        
+        
+        
+        {
+            id: 'park-little-red',
+            alignment: 'fully',
+            hidden: false,
+            //displayMarker: false, //created this attribute manually RR 8/9/23
+            //title: '',
+            image: './images/little-red.jpg',
+            description: 'A century-old lighthouse, famously <a href="https://www.hrmm.org/uploads/2/6/3/3/26336013/children_helped_save_a_lighthouse_2000.pdf" target="_blank">saved by children from demolition</a>, stands under the George Washington Bridge',
+            location: {
+                center: [-73.94616, 40.84513],
+                zoom: 14.00,
+                pitch: 0.00,
+                bearing: 28.00
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [ 
+                //{layer: 'nj-blocker', opacity:0.75},
+                //{layer: 'park-fort-wash', opacity:1},
+                {layer: 'mapbox-satellite', opacity:0} 
+            ],
+            onChapterExit: [
+                //{layer: 'park-fort-wash', opacity:0}
             ]
         },
         
@@ -167,11 +166,11 @@ var config = {
             rotateAnimation: false,
             //callback: 'showDots',
             onChapterEnter: [
-                {layer: 'little-red', opacity:0},
-                {layer: 'path-points-south', opacity:0},
+                {layer: 'path-main', opacity:1},
                 {layer: '158-entry', opacity:1}
             ],
             onChapterExit: [
+                {layer: '158-entry', opacity:0}
             ]
         },
         
@@ -186,7 +185,7 @@ var config = {
             description: '...or from points further south along the riverside trail extending to Manhattan\'s southern tip at The Battery.',
             location: {
                 center: [-73.9489, 40.8366],
-                zoom: 13.00,
+                zoom: 14.00,
                 pitch: 0.00,
                 bearing: 28.00
             },
@@ -194,16 +193,39 @@ var config = {
             rotateAnimation: false,
             //callback: 'greenDots',
             onChapterEnter: [
-                {layer: '158-entry', opacity:0},
-                {layer: '165-crossing1', opacity:0},
-                {layer: 'path-165th', opacity:0},
-                {layer: 'path-main', opacity:1},
-                {layer: 'path-points-south', opacity:1}
+                {layer: 'path-main', opacity:1}
             ],
             onChapterExit: [
             ]
         },
         
+        
+        
+        // {
+        //     id: 'secret-paths-overview-2',
+        //     alignment: 'left',
+        //     hidden: false,
+        //     description: 'A warren of lesser-known paths provides some indirect access to the park at 165th and 176th, but the 165th lacks a crosswalk...and 176th desolate (show 2x pictures)',
+        //     location: {
+        //         center: [-73.94616, 40.84513],
+        //         zoom: 15.00,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'flyTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {layer: 'path-165th', opacity:1},
+        //         {layer: 'path-176th', opacity:1},
+        //         {layer: 'path-dyckman', opacity:0.3},
+        //         {layer: 'path-main', opacity:0.3},
+        //         {layer: 'mapbox-satellite', opacity:0},
+        //         {layer: 'social-trail', opacity:1}
+        //     ],
+        //     onChapterExit: [
+        //     ]
+        // },
         
         
         
@@ -224,15 +246,13 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'path-176th', opacity:0},
-                {layer: '176-underpass', opacity:0},
+                {layer: 'path-165th', opacity:1},
                 {layer: 'path-165th', opacity:1},
                 {layer: 'path-176th', opacity:0},
-                {layer: 'path-main', opacity:1},
-                {layer: 'path-points-south', opacity:0},
                 {layer: '165-crossing1', opacity:1}
             ],
             onChapterExit: [
+                {layer: '165-crossing1', opacity:0}
             ]
         },
         
@@ -258,8 +278,6 @@ var config = {
                 {layer: 'path-165th', opacity:0},
                 {layer: 'path-176th', opacity:1},
                 {layer: 'path-dyckman', opacity:0},
-                {layer: 'path-main', opacity:1},
-                {layer: '165-crossing1', opacity:0},
                 {layer: '176-underpass', opacity:1}
             ],
             onChapterExit: [
@@ -274,7 +292,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             //title: '',
-            image: './images/182-entry.jpg',
+            image: './images/entry-182.jpg',
             description: 'More commonly, pedestrians and cyclists enter the park via a bridge crossing the expressway at 182nd street.',
             location: {
                 center: [-73.9412, 40.8524],
@@ -286,17 +304,72 @@ var config = {
             rotateAnimation: false,
             //callback: 'hideDots',
             onChapterEnter: [
-                {layer: 'path-176th', opacity:0},
-                {layer: '176-underpass', opacity:0},
                 {layer: '182-entry', opacity:1},
-                {layer: '182-hh-merge', opacity:0},
-                {layer: 'path-182-to-dyckman', opacity:0},
+                //{layer: 'park-fort-wash', opacity:1},
                 {layer: 'path-main', opacity:1}
             ],
             onChapterExit: [
+                // {layer: 'park-fort-wash', opacity:0},
                 {layer: '182-entry', opacity:0}
             ]
         },
+        
+        
+        
+        // {
+        //     id: 'access-points-north',
+        //     alignment: 'left',
+        //     hidden: false,
+        //     description: 'But there\'s no official riverfront trail north of the George Washington Bridge connecting to the trail headed south from Dyckman Street, 1.5 miles away.',
+        //     location: {
+        //         center: [-73.94616, 40.84513],
+        //         zoom: 15.00,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'flyTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {layer: 'path-165th', opacity:1},
+        //         {layer: 'path-176th', opacity:1},
+        //         {layer: 'path-dyckman', opacity:0.3},
+        //         {layer: 'path-main', opacity:0.3},
+        //         {layer: 'mapbox-satellite', opacity:0},
+        //         {layer: 'social-trail', opacity:1}
+        //     ],
+        //     onChapterExit: [
+        //     ]
+        // },
+        
+        
+        
+        // {
+        //     id: 'C-trail-turn',
+        //     alignment: 'left',
+        //     hidden: false,
+        //     //title: '',
+        //     image: './images/182-inland-turn.jpg',
+        //     description: 'But there\'s no official riverfront trail north of the George Washington Bridge connecting to the trail headed south from Dyckman Street, 1.5 miles away. The main trail through the park follows the riverfront before turning inland just north of the George Washington Bridge.',
+        //     location: {
+        //         center: [-73.94617029306572,
+        //             40.8499500890377],
+        //         zoom: 15.07,
+        //         pitch: 0.00,
+        //         bearing: 28.00
+        //     },
+        //     mapAnimation: 'flyTo',
+        //     rotateAnimation: false,
+        //     callback: '',
+        //     onChapterEnter: [
+        //         {layer: 'path-dyckman', opacity:1},
+        //         {layer: 'path-main', opacity:1},
+        //         {layer: '182-gwb-split', opacity:1}
+        //     ],
+        //     onChapterExit: [
+        //         {layer: '182-gwb-split', opacity:0}
+        //     ]
+        // },
         
         
         
@@ -308,8 +381,8 @@ var config = {
             image: './images/182-hh-merge.jpg',
             description: 'North of the 182nd entry, there\'s no official riverfront trail connecting the main section of Fort Washington Park to the northern section of the park. Pedestrians and cyclists follow a narrow sidewalk along the noisy Henry Hudson Parkway for a mile and a half to re-enter the park at Dyckman Street.',
             location: {
-                center: [-73.93641, 40.85918],
-                zoom: 14.00,
+                center: [-73.94332788888889,40.85130236108333],
+                zoom: 15.07,
                 pitch: 0.00,
                 bearing: 28.00
             },
@@ -317,13 +390,13 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: 'overlay-alltrails', opacity:0},
-                {layer: 'path-182-to-dyckman', opacity:1},
+                //{layer: 'overlay-alltrails', opacity:0},
                 {layer: 'path-dyckman', opacity:1},
                 {layer: 'path-main', opacity:1},
                 {layer: '182-hh-merge', opacity:1}
             ],
             onChapterExit: [
+                {layer: '182-hh-merge', opacity:0}
             ]
         },
         
@@ -346,14 +419,12 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                {layer: '182-hh-merge', opacity:0},
                 {layer: 'overlay-alltrails', opacity:1},
-                {layer: 'path-182-to-dyckman', opacity:0},
                 {layer: 'path-dyckman', opacity:1},
-                {layer: 'path-main', opacity:1},
                 {layer: 'mapbox-satellite', opacity: 0}
             ],
             onChapterExit: [
+                {layer: 'overlay-alltrails', opacity:0},
             ]
         },
 
@@ -405,7 +476,6 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {layer: 'mapbox-satellite', opacity:1},
-                {layer: 'overlay-alltrails', opacity:0},
                 {layer: 'social-trail', opacity:1}
             ],
             onChapterExit: [
