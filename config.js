@@ -216,7 +216,7 @@ var config = {
             description: 'In the 1990s, park advocates won development of a <a href="https://www.nytimes.com/1994/05/01/nyregion/neighborhoos-report-washington-heights-a-battle-lost-a-bridge-won.html" target="_blank">new entry at 165th</a>. But this rarely-used path requires a mile-long journey alongside the parkway and railway to get into the park. Frustratingly, it also requires a <a href="https://nyc.streetsblog.org/2009/07/06/eyes-on-the-street-risking-life-and-limb-for-greenway-access" target="_blank">treacherous crossing against relentless oncoming traffic</a> entering an on-ramp to the George Washington Bridge with no crosswalk and no stoplight.',
             location: {
                 center: [-73.9441, 40.8437],
-                zoom: 15.18,
+                zoom: 15.00,
                 pitch: 0.00,
                 bearing: 28.00
             },
@@ -247,7 +247,7 @@ var config = {
             description: 'Further north, an entry at 176th winds through deserted tunnels. Isolated from both the park and the city, this path is strewn with discarded clothes, garbage, and luggage cases.',
             location: {
                 center: [-73.9434,40.8493],
-                zoom: 15.81,
+                zoom: 15.00,
                 pitch: 0.00,
                 bearing: 28.00
             },
