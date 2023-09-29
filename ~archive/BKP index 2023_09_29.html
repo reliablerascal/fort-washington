@@ -152,70 +152,9 @@
 </head>
 <body>
 
-
-
-<!--------------------------------------------->
-<!--- ADDED THIS SECTION 9/29 for fixed intro-->
-<!--------------------------------------------->
-<!---add margins to control width--->
-<main id="content" class="neve-main" role="main">
-    <div id="intro">
-    <table width = 100%>
-        <tr><td colspan=3>&nbsp;</td></tr>
-        <td width = 50></td>
-        <td>
-    
-        <h1>DRAFT: The Uneasy Entry to a Peaceful Fortress</h1>
-        <h3><em>Fort Washington Park provides an escape from urban life, but navigating to the park around rail and automotive thruways reveals a patchwork of unfinished city plans.</em></h3>
-        <p>by <a href="https://reliablerascal.github.io" target="_blank">Rob Reid</a><br><br>
-            <em>29 September 2023</em><br>
-            <br><br>
-        <img src="./images/wash_park_scene_without_ppl.jpg" style="width: 100%;"></img>
-        
-<!-- <div style="max-width: 800px; margin:0 auto; text-align: left; line-height: 25px;"> 
-    <p>&nbsp;<p>&nbsp;<p>Countless drivers crisscross the rugged prairie of Chicago's Southeast Side, weaving around decaying steel mills, abandoned grain silos, landfills, and recycling plants. Traversing the Chicago Skyway, the Bishop Ford Freeway, or major thoroughfares like 130th Street and Torrence Avenue, motorists might not notice the lakefront beaches or wetland parks fashioned from former industrial sites reclaimed by the city in recent decades. They also might not notice the small number of people on foot and bike trying to find respite in these natural settings.<p>&nbsp;<p>&nbsp;
-</div> -->
-
-    </td><td width = 50></td></tr></table>
-</div>
-        
-<!----------------------->
-<!---    THE STORY     -->
-<!----------------------->
-<!-- STORY contains narrative corresponding to the map as coded in config.js-->
 <div id="map"></div>
 <div id="story"></div>
-</main>
 
-
-<!----------------------->
-<!---    FOOTER     -->
-<!----------------------->
-<!-- <footer>
-    <div id="outro">
-        <table width = 100%>
-            <tr><td colspan=3>&nbsp;</td></tr>
-            <td width = 50></td>
-            <td>
-                <div style="max-width: 800px; margin:0 auto; text-align: left; line-height: 25px;"> 
-                <p>Building on this and other plans, Friends of Big Marsh published the <a href="https://bigmarsh.org/2023/07/14/east-side-community-connections-plan/" target="_blank">East Side Neighborhood Connectivity Plan</a>, which delves into a concrete feasibility plan and provides specific recommendations for how to make that work. As <a href="https://chi.streetsblog.org/2023/07/14/new-east-side-connectivity-plan-would-upgrade-condition-for-biking-to-big-marsh" target="_blank">Streetsblog noted in July</a>, that plan is a key step in building political will necessary to secure funding for bike and pedestrian transit improvements.
-
-<p>While funding requirements are significant, improved access in the region would help area residents and visitors tap into an arguably greater wealth: the area’s abundant park space.
-
-    <p><em>Streetsblog Chicago published a <a href="https://chi.streetsblog.org/2023/09/11/how-can-we-better-link-the-far-southeast-sides-disconnected-network-of-public-parks" target="_blank">version of this story on September 11, 2023.</a></em>
-        </div>
-    </td><td width = 50></td></tr></table>
-</div>
-</footer> -->
-
-
-
-
-
-
-<!----------------------->
-<!---    LOAD MAPS     -->
-<!----------------------->
 <script src="./config.js"></script>
 <script>
 var initLoad = true;
@@ -264,37 +203,37 @@ var story = document.getElementById('story');
 var features = document.createElement('div');
 features.setAttribute('id', 'features');
 
-// var header = document.createElement('div');
+var header = document.createElement('div');
 
-// if (config.title) {
-//     var titleText = document.createElement('h1');
-//     titleText.innerText = config.title;
-//     header.appendChild(titleText);
-// }
+if (config.title) {
+    var titleText = document.createElement('h1');
+    titleText.innerText = config.title;
+    header.appendChild(titleText);
+}
 
-// if (config.subtitle) {
-//     var subtitleText = document.createElement('h2');
-//     subtitleText.innerText = config.subtitle;
-//     header.appendChild(subtitleText);
-// }
+if (config.subtitle) {
+    var subtitleText = document.createElement('h2');
+    subtitleText.innerText = config.subtitle;
+    header.appendChild(subtitleText);
+}
 
-// if (config.byline) {
-//     var bylineText = document.createElement('p');
-//     bylineText.innerText = config.byline;
-//     header.appendChild(bylineText);
-// }
+if (config.byline) {
+    var bylineText = document.createElement('p');
+    bylineText.innerText = config.byline;
+    header.appendChild(bylineText);
+}
 
-// if (config.leadPhoto) {
-//     var image = new Image();
-//         image.src = config.leadPhoto;
-//         header.appendChild(image);
-// }
+if (config.leadPhoto) {
+    var image = new Image();
+        image.src = config.leadPhoto;
+        header.appendChild(image);
+}
 
-// if (header.innerText.length > 0) {
-//     header.classList.add(config.theme);
-//     header.setAttribute('id', 'header');
-//     story.appendChild(header);
-// }
+if (header.innerText.length > 0) {
+    header.classList.add(config.theme);
+    header.setAttribute('id', 'header');
+    story.appendChild(header);
+}
 
 config.chapters.forEach((record, idx) => {
     var container = document.createElement('div');

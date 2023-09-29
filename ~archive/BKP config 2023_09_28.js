@@ -16,9 +16,9 @@ var config = {
     theme: 'light',
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
-    title: 'DRAFT: The Uneasy Entry to a Peaceful Fortress',
-    subtitle: 'Fort Washington Park provides an escape from urban life, but navigating to the park around rail and automotive thruways reveals a patchwork of unfinished city plans.',
-    byline: 'By Rob Reid | 29 September',
+    title: 'DRAFT: The Uneasy Entry to a Relaxing Fortress',
+    subtitle: 'Fort Washington Park provides an escape from urban life, but navigating to the park around rail and automotive thruways reveals a patchwork of unfinished urban plans.',
+    byline: 'By Rob Reid | 28 September',
     footer: 'See <a href="https://github.com/reliablerascal/fort-washington-access">GitHub repository</a> for methodology and data.<br>Created based on the <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     leadPhoto: './images/wash_park_scene_without_ppl.jpg',
     chapters: [
@@ -132,7 +132,7 @@ var config = {
             //displayMarker: false, //created this attribute manually RR 8/9/23
             //title: '',
             image: './images/park_sisyphus.jpg',
-            description: 'The riverfront trail follows the Hudson\'s rocky shoreline, passing an enigmatic art exhibit known as the Sisyphus Stones. It\'s the work of a persistent Albanian immigrant who has <a href="https://www.nytimes.com/2017/09/14/nyregion/a-mystery-solved-why-the-sisyphus-stones-rise-and-tumble.html" target="_blank">repeatedly reconstructed the stony figures</a> after they\'ve been vandalized.',
+            description: 'The riverfront trail follows the Hudson\'s rocky shoreline, passing an enigmatic art exhibit known as the Sisyphus stones. It\'s the work of a persistent Albanian immigrant who <a href="https://www.nytimes.com/2017/09/14/nyregion/a-mystery-solved-why-the-sisyphus-stones-rise-and-tumble.html" target="_blank">repeatedly reconstructs stony figures</a> after they\'re vandalized.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -241,7 +241,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/182-inland-turn.jpg',
-            description: 'The main trail through the park follows the riverfront before turning inland just north of the George Washington Bridge.',
+            description: 'The main trail through the park follows the riverfront before turning inland just north of the George Washington Bridge, crossing over the Amtrak, and then under the southbound Henry Hudson Parkway...',
             location: {
                 center: [-73.94617029306572,
                     40.8499500890377],
@@ -270,7 +270,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/182-hh-merge.jpg',
-            description: 'Crossing over the Amtrak and under the southbound Henry Hudson Parkway, the path deposits pedestrians and cyclists on a narrow sidewalk along the northbound Henry Hudson Parkway.',
+            description: '...depositing pedestrians and cyclists on a narrow sidewalk along the northbound Henry Hudson Parkway.',
             location: {
                 center: [-73.94332788888889,40.85130236108333],
                 zoom: 15.07,
@@ -326,7 +326,7 @@ var config = {
             id: 'access-points-north',
             alignment: 'left',
             hidden: false,
-            description: 'But there\'s no official riverfront trail north of the George Washington Bridge connecting to the trail headed south from Dyckman Street, 1.5 miles away.',
+            description: 'But there\'s no official riverfront trail north of the George Washington Bridge connecting the bridge to Washington Park North up to Dyckman Street, another 1.5 miles north.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 15.00,
@@ -518,7 +518,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './panorama.mp4',
-            description: 'Though there was no clear indication that this path is prohibited, I would later learn that the connector trail is what is known as a <em>social trail</em>. According to the National Park Service, a <a href="https://www.nps.gov/articles/000/social-trails.htm#:~:text=A%20social%20trail%20is%20an,look%20like%20an%20official%20trail.&text=To%20set%20a%20good%20example,day%2C%20stay%20on%20designated%20trails" target="_blank">social trail is an unofficial detour created by hikers</a>. After repeated use the detour gets worn down to the point of <em>appearing</em> to be an official trail.<p>The National Park Service warns that use of these trails can result in ecological damage. And park stewards note that <a href="https://www.reddit.com/r/openstreetmap/comments/ozz4zx/comment/h84912u/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=2&utm_content=share_button&rdt=48941&onetap_auto=true" target="_blank">hiding these social trails from official maps is a deliberate choice</a>- reflecting ecological, safety, and maintenance concerns.',
+            description: 'Though there was no clear indication that this path is prohibited, I would later learn that the connector trail is what is known as a <em>social trail</em>. According to the National Park Service, a <a href="https://www.nps.gov/articles/000/social-trails.htm#:~:text=A%20social%20trail%20is%20an,look%20like%20an%20official%20trail.&text=To%20set%20a%20good%20example,day%2C%20stay%20on%20designated%20trails" target="_blank">social trail is an unofficial detour created by hikers</a>. After repeated use the detour gets worn down to the point of <em>appearing</em> to be an official trail.<p>The National Park Service warns that use of these trails can result in ecological damage. And park stewards note that <a href="https://www.reddit.com/r/openstreetmap/comments/ozz4zx/comment/h84912u/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=2&utm_content=share_button&rdt=48941&onetap_auto=true" target="_blank">hiding these social trails from official maps is a deliberate choice</a>- reflecting ecological concerns as well as safety, and maintenance considerations.',
             location: {
                 center: [-73.94161, 40.85336],
                 zoom: 15.07,
@@ -541,7 +541,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/012_social_outside_rail.jpeg',
-            description: 'At the same time, evidence of frequent use suggests that the public would support development of an official trail.',
+            description: 'At the same time, evidence of repeated use suggests that public support would exist for developing an official trail.',
             location: {
                 center: [-73.9407, 40.8558],
                 zoom: 15.07,
@@ -569,7 +569,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/entry-social-north.jpg',
-            description: 'Looking behind me after reaching the north end of the social trail, I saw a sign clearly stating, "No public access beyond this point." It would seem that the trail is legal going north, but illegal going south. This calls to mind a famous song.',
+            description: 'Looking behind me after reaching the other end of the trail, I saw a sign clearly stating, "No public access beyond this point." It would seem that the trail is legal going north, but illegal going south. This calls to mind a famous song.',
             location: {
                 center: [-73.939795,40.8569679],
                 zoom: 15.07,
@@ -616,7 +616,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/014_fort_washington_park.jpeg',
-            description: 'Discussion about continuing the riverfront path dates back at least a century. In 1917, the city <a href="https://www.forttryonparktrust.org/wp-content/uploads/2017/05/1983FortTryonPark-LPC.pdf" target="_blank">spurned John D. Rockefeller Jr.\'s conditional offer</a> of the land that\'s now Fort Tryon park. For financial reasons, the city could not honor Rockefeller\'s condition that the park be connected to Fort Washington Park.<p>More recently, the city estimated it would cost $22 million to essentially <a href="https://www.nytimes.com/2014/08/15/nyregion/new-riverside-trail-goes-only-so-far.html" target="_blank">transform the social trail to an official trail</a>- a cost elevated by a need for landfill supporting a paved, bike-friendly trail.',
+            description: 'Discussion about extending the path dates back to at least 1917, when the city <a href="https://www.forttryonparktrust.org/wp-content/uploads/2017/05/1983FortTryonPark-LPC.pdf" target="_blank">spurned John D. Rockefeller Jr.\'s conditional offer</a> of the land that\'s now Fort Tryon park. The city could not commit to honoring Rockefeller\'s expectation that the park be connected to Fort Washington Park.<p>More recently, the city estimated it would cost $22 million to essentially <a href="https://www.nytimes.com/2014/08/15/nyregion/new-riverside-trail-goes-only-so-far.html" target="_blank">transform the social trail to an official trail</a>- a cost elevated by a need for landfill to create enough space for a paved, bike-friendly trail.',
             location: {
                 center: [-73.94161, 40.85336],
                 zoom: 14,
