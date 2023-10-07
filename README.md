@@ -1,9 +1,13 @@
 # river side, not Riverside
 _An exploration of access issues to Fort Washington Park_
 
-This repository is currently a nest of the type that rats might find enjoyable. That's because it's a cluttered work in progress, full of trials and mostly errors. For now, see [river side, not Riverside](https://docs.google.com/presentation/d/1ZwO5fan_ltLzFTe16mZ3CVEGW-FTXvENLcBm89uCm5U/edit#slide=id.g260a9537d66_0_40) for a deeper dive into part of my process.
+This repository is currently a nest of the type that rats might find enjoyable. That's because it's a cluttered work in progress, full of trials and mostly errors.
 
-Here's a prototype draft of my story, [The Stressfull Entry to a Relaxing Fortress](https://reliablerascal.github.io/fort-washington/), as published on GitHub.
+The scrolling map was adapted in part from <a href="https://github.com/mapbox/storytelling" target="_blank">Chris Whong's Mapbox Storytelling template</a>.
+
+For now, see [river side, not Riverside](https://docs.google.com/presentation/d/1ZwO5fan_ltLzFTe16mZ3CVEGW-FTXvENLcBm89uCm5U/edit#slide=id.g260a9537d66_0_40) for a deeper dive into part of my process.
+
+Here's a prototype draft of my story, [The Stressful Entry to a Relaxing Fortress](https://reliablerascal.github.io/fort-washington/), as published on GitHub.
 
 ## Key Findings and Data Sources
 ...
@@ -50,7 +54,7 @@ Here's a prototype draft of my story, [The Stressfull Entry to a Relaxing Fortre
 <!---* [Jupyter Notebooks](notebooks)- six notebooks following through the data analysis steps from path development to calculating effort--->
 <!-- * [data](data/)- this contains only a simple 10-day forecast acquired from [IQ Air](https://iqair.com)
 * [scrollama_aqi.js](scrollama_aqi.js)- JavaScript code for responding to scrolling events, originally derived from https://github.com/zhoyoyo/lede23-animation. 
-* [weather_chords.js](weather_chords.js)- JavaScript code for translating AQI readings to musical chords. This file specifies which chords were chosen to represent each AQI category- which I am not documenting here as it may be subject to change.  --> -->
+* [weather_chords.js](weather_chords.js)- JavaScript code for translating AQI readings to musical chords. This file specifies which chords were chosen to represent each AQI category- which I am not documenting here as it may be subject to change.  -->
 
 <!---* [results](results/)- results of data analysis--->
 <!---* [images](images/)- pictures and graphs supporting this story--->
