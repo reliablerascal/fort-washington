@@ -96,7 +96,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'It\'s directly connected to the riverside trail extending all the way to Manhattan\'s southern tip at The Battery.',
+            description: 'It\'s well-connected to the <a href="https://www.traillink.com/trail/hudson-river-greenway/">Hudson River Greenway</a>, which extends all the way to Manhattan\'s southern tip at The Battery.',
             location: {
                 center: [-73.9489, 40.8366],
                 zoom: 13.00,
@@ -124,7 +124,7 @@ var config = {
             //displayMarker: false, //created this attribute manually RR 8/9/23
             //title: '',
             image: './images/little-red.jpg',
-            description: 'Heading north, the trail through the park runs as far as the century-old <a href="https://www.hrmm.org/uploads/2/6/3/3/26336013/children_helped_save_a_lighthouse_2000.pdf" target="_blank">Little Red Lighthouse</a> under the George Washington Bridge.',
+            description: 'But heading north, the trail clings to the riverfront only as far as the century-old <a href="https://www.hrmm.org/uploads/2/6/3/3/26336013/children_helped_save_a_lighthouse_2000.pdf" target="_blank">Little Red Lighthouse</a> under the George Washington Bridge.',
             location: {
                 center: [-73.94616, 40.84513],
                 zoom: 14.00,
@@ -260,7 +260,8 @@ var config = {
                      {layer: 'social-trail', opacity:1},
                      {layer: 'social-entry-north', opacity:1},
                      {layer: 'social-riverside', opacity:0},
-                     {layer: '158-entry', opacity:0} 
+                     {layer: '158-entry', opacity:0},
+                     {layer: '182-entry', opacity:0}
                  ],
                  onChapterExit: [   
                  ]
@@ -286,6 +287,7 @@ var config = {
             //callback: 'showDots',
             onChapterEnter: [
                 {layer: '158-entry', opacity:1},
+                {layer: '182-entry', opacity:1},
 
                 {layer: 'path-dyckman', opacity:0},
                 {layer: 'social-entry-north', opacity:0},
@@ -321,6 +323,7 @@ var config = {
                 {layer: 'path-165th', opacity:1},
 
                 {layer: '158-entry', opacity:0},
+                {layer: '182-entry', opacity:0},
 
                 {layer: 'path-176th', opacity:0},
                 {layer: '176-underpass', opacity:0}
