@@ -1,31 +1,25 @@
 # river side, not Riverside
 _An exploration of access issues to Fort Washington Park_
 
-This repository is currently a nest of the type that rats might find enjoyable. That's because it's a cluttered work in progress, full of trials and mostly errors.
+My focus for this project is to geographically show the challenges of accessing New York City's Fort Washington Park. Starting with <a href="https://github.com/mapbox/storytelling" target="_blank">Chris Whong's Mapbox Storytelling template</a>, I adapted it to function as a "sticky" graphic, imported layers directly from GeoJSON to get past MapBox's 15 layer limit, added and rendered some of my own JavaScript properties, etc.
 
-The scrolling map was adapted in part from <a href="https://github.com/mapbox/storytelling" target="_blank">Chris Whong's Mapbox Storytelling template</a>.
+See also my Columbia Lede class presentation [river side, not Riverside](https://docs.google.com/presentation/d/1ZwO5fan_ltLzFTe16mZ3CVEGW-FTXvENLcBm89uCm5U/edit#slide=id.g260a9537d66_0_40) for a deeper dive into my process specific to rendering the unofficial trail.
 
-For now, see [river side, not Riverside](https://docs.google.com/presentation/d/1ZwO5fan_ltLzFTe16mZ3CVEGW-FTXvENLcBm89uCm5U/edit#slide=id.g260a9537d66_0_40) for a deeper dive into part of my process.
+Here's a prototype draft of my story, [The Stressful Entry to a Relaxing Fortress](https://reliablerascal.github.io/fort-washington/), as published on my GitHub.
 
-Here's a prototype draft of my story, [The Stressful Entry to a Relaxing Fortress](https://reliablerascal.github.io/fort-washington/), as published on GitHub.
-
-## Key Findings and Data Sources
-...
-<!---<ul>
-<li>
-</ul>--->
-
-<!---## Data sources
+## Data sources
 |Data Source|Description|
 |---|---|
-|[AllTrails](https://alltrails.com)|This free app allows you to create path maps or record them live based on live walking, and then export these maps as GPX files. Because I have no reliable means of controlling my walking pace, I chose to focus on created path maps rather than live walk maps. I excluded walk time as a variable.|
+|[AllTrails](https://alltrails.com)|This free app allowed me to create path maps by recording them, as I did with the [unofficial riverfront trail north of the George Washington Bridge](https://www.alltrails.com/explore/map/riverfront-180-to-189-8722c8f), or drawing them, as I did with the [Hudson River Greenway south of Fort Washington Park](https://www.alltrails.com/explore/map/map-september-28-2023-9f31942). I then exported these maps as GPX files.|
 |[Google Earth](https://earth.google.com)|Regardless of whether I walked or recorded my map, AllTrails (and Strava) introduced errors in measuring the altitude of Riverside at sites of bridges over Trinity Cemetery(155th street) and Riverside Viaduct (136th to 129th Street). Google Earth allows lookup of actual height based on pointing and clicking on satellite images.|
 --->
 
 ## Overview of Data Interpretation Process
-<!---Data Analysis Process--->
-...
-<!-- * Created a function to play chords using the <a href="https://github.com/Tonejs/Tone.js/blob/dev/README.md" target="_blank">tone.js</a> Javascript library, based on a list of five notes per chord -->
+To create a path for the unofficial trail north of the George Washington Bridge, I did the following:
+<ol>
+<li>In AllTrails, recorded the trail
+<li>In [GeoJSON.io](https://geojson.io) Satellite Streets view, deleted points to reduce file size and edited the path to correct imprecisions such as weaving over the Amtrak fence or into the river.
+</ol>
 
 
 ## Data Quirks and Other E-Varmints Standing in My Righteous Path
