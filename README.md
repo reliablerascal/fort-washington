@@ -34,7 +34,7 @@ This was my second MapBox storytelling project. It's very quick and easy to get 
 <li>Uploaded map layers using map.addSource and map.AddLayer (+ filter) to work past MapBox's limit of 15 layers
 <li>Picked up a lot of techniques which I ultimately stripped out to simplify my story. E.g. georeferencing to overlay an historic map of Fort Washington. I also initially used masking to hide New Jersey which made it look like the GW Bridge dropped off a cliff. I later settled on a more basic base map
 <li>Experimented and revised my workflow for map design using a range of apps (QGIS, MapBox, DataWrapper, GeoJSON.io, AllTrails, Strava, Google Maps, Google MyMap)
-<li>Most importantly, I learned to not be afraid to ask for help. And I got help from so many folks at Columbia- Aaron Reiss, Kelly Waldron, Steph Andrews amongst many others. Federico Teijeiro originally found and recommended the MapBox storytelling template to me.
+<li>Most importantly, I learned to not be afraid to ask for help. And I got help from so many folks at Columbia- Aaron Reiss, Kelly Waldron, Steph Andrews amongst others. Federico Teijeiro originally found and recommended the MapBox storytelling template to me.
 </ul>
 
 ## What I'd Like to Learn Next to Advance this Project
