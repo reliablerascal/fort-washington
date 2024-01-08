@@ -5,7 +5,7 @@ My focus for this project was to geographically show the challenges of getting i
 
 See also my Columbia Lede class presentation [river side, not Riverside](https://docs.google.com/presentation/d/1ZwO5fan_ltLzFTe16mZ3CVEGW-FTXvENLcBm89uCm5U/edit#slide=id.g260a9537d66_0_40) for a deeper dive into my process specific to rendering the unofficial trail.
 
-Here's a prototype draft of my story, <strong>[New York's Isolated Park on the Hudson](https://reliablerascal.github.io/fort-washington/)</strong>, as published on my GitHub.
+Here's a prototype draft of my story, <strong>[New York's Isolated Park on the Hudson](https://reliablerascal.github.io/fort-washington/)</strong>. At this time (January 2024) I'm in conversation with a New York outlet about developing this story for publication. See also a similar map-based story I published with [Streetsblog Chicago](https://chi.streetsblog.org/2023/09/11/how-can-we-better-link-the-far-southeast-sides-disconnected-network-of-public-parks); because CMS restrictions confined the map to an iFrame, I also have a [self-published version](https://reliablerascal.github.io/bike-far-southeast/).
 
 ## Data sources
 |Data Source|Description|
@@ -18,12 +18,12 @@ Here's a prototype draft of my story, <strong>[New York's Isolated Park on the H
 To create most paths, I did the following:
 <ol>
 <li>In AllTrails, used the Draw Map feature to create the path, then exported as KML.
-<li>In QGIS, imported KML files and exported as ShapeFiles.
-<li>In MapBox, imported the ShapeFile into a style specific to this project.
+<li>In QGIS, imported KML files and exported as shapefiles.
+<li>In MapBox, imported the shapeFile into a style specific to this project.
 <li>Index.html references my MapBox style.
 </ol>
 <br>
-For the unofficial trail north of the George Washington Bridge, I brought this into GeoJSON.io Satellite Streets view, deleted about 2/3rds of the points to reduce file size, and edited the path to correct imprecisions such as weaving over the Amtrak fence or into the river. Then I exported as GeoJSON.
+For the unofficial trail north of the George Washington Bridge, I brought this into GeoJSON.io. Using satellite streets view, I deleted about 2/3rds of the points to reduce file size, and edited the path to correct imprecisions such as weaving over the Amtrak fence or into the river. Then I exported as GeoJSON.
 <br><br>
 My phone automatically geocoded the images, though I manually pasted these lat and lng coordinates into chapters in my MapBox.
 
@@ -40,6 +40,7 @@ This was my second MapBox storytelling project. It's very quick and easy to get 
 ## What I'd Like to Learn Next to Advance this Project
 Fortunately I had the time to revise and improve this project after completing my studies at Columbia. Some possible next steps:
 <ul><li>Work with outlets to develop this story or variants based on this framework. Related to this, I'll need to find ways to work around outlets' proprietary content management systems.
+<li>Create my own set of recommendations to help small, CMS-restricted outlets scope out exactly what it would take (e.g. AWS setup) to host this sort of project.
 <li>Develop a scrollytelling story using MapBox's 3-D utilities, e.g. to show Von Humboldt's climb up Chimborazo.
 </ul>
 
