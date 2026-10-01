@@ -2,10 +2,10 @@ var config = {
     style: 'mapbox://styles/robcat26/clle01vvz01h601qn2h7i05ei',
     
     //URL-restricted token
-    //accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrdTE0ZXQ0MDllZDNtbzhhdWh2MXFneiJ9.vZY4_YLk_rxN-Wc1eE7_wQ',
+    accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xrdTE0ZXQ0MDllZDNtbzhhdWh2MXFneiJ9.vZY4_YLk_rxN-Wc1eE7_wQ',
     
     //default public token for development phase only
-    accessToken: 'pk.eyJ1Ijoicm9iY2F0MjYiLCJhIjoiY2xuMzdpbmU1MDdtMzJybXA3cXM3ZnE0ciJ9.wKSsduoCg0HY42Qaq61sCw',
+    // REMOVED
 
     showMarkers: false,
     markerColor: '#3FB1CE',
@@ -96,7 +96,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'It\'s well-connected to the <a href="https://www.traillink.com/trail/hudson-river-greenway/">Hudson River Greenway</a>, which extends all the way to Manhattan\'s southern tip at The Battery.',
+            description: 'At its heart runs the <a href="https://www.traillink.com/trail/hudson-river-greenway/">Hudson River Greenway</a>, which extends all the way to Manhattan\'s southern tip at The Battery.',
             location: {
                 center: [-73.9489, 40.8366],
                 zoom: 13.00,
@@ -155,7 +155,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/182-hh-merge.jpg',
-            description: 'The trail then turns inland, over the Amtrak tracks and under the southbound parkway. Continuing north, it merges into a narrow sidewalk along the noisy northbound parkway for a mile and a half before the next pedestrian exit at Dyckman Street.',
+            description: 'The trail then turns inland, over the Amtrak tracks and under the southbound parkway. Continuing north, it merges into a narrow sidewalk along the noisy northbound parkway for more than a mile before the next pedestrian exit at Dyckman Street.',
             location: {
                 center: [-73.93641, 40.85918],
                 zoom: 14.00,
@@ -186,7 +186,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             image: './images/009_social_entry_south.jpeg',
-            description: 'But though it\'s difficult to find on the ground, satellite imagery reveals an informal riverside path continuing north between the river and the Amtrak rails.',
+            description: 'But an informal riverside path continues north between the river and the rails.',
             location: {
                 center: [-73.94055, 40.85598],
                 //center: [-73.94055, 40.85578],
@@ -218,7 +218,8 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/011_social_riverside.jpeg',
-            description: 'Pinched between the Hudson and the fence barricading Amtrak\'s rails, this unofficial trail offers unobstructed views of the river, the George Washington Bridge, and the New Jersey Palisades. But it\'s clearly not set up to support heavy traffic. Railroad ballast supporting some especially narrow stretches of the trail threatens to break up into the river.',
+            description: 'Pinched between the Hudson and the fence barricading Amtrak\'s rails, this unofficial trail offers unobstructed views of the river, the George Washington Bridge, and the New Jersey Palisades. But it\'s clearly not set up to support heavy traffic.',
+            //Railroad ballast supporting some especially narrow stretches of the trail threatens to break up into the river.
             location: {
                 center: [-73.9420, 40.8537],
                 zoom: 15.07,
@@ -245,7 +246,7 @@ var config = {
                  alignment: 'left',
                  hidden: false,
                  image: './images/entry-social-north.jpg',
-                 description: 'Facing back at the north end of the informal trail, a sign clearly states, "No public access beyond this point." It would seem that the trail is legal going north, but illegal going south.',
+                 description: 'At the north end of the informal trail, a sign in 2023 clearly stated, "No public access beyond this point."',
                  location: {
                      center: [-73.939795,40.8569679],
                      zoom: 15.07,
@@ -275,7 +276,7 @@ var config = {
             hidden: false,
             //title: '',
             image: './images/entry-158.jpg',
-            description: 'Residents of neighboring Washington Park most commonly enter the park at 182nd and from these stairs at 158th under Riverside Drive. But those two main entries are spaced a mile and a half apart. ',
+            description: 'Residents of neighboring Washington Heights most commonly enter the park at 181st and from these stairs at 158th under Riverside Drive. But those two main entries are spaced a mile and a half apart. ',
             location: {
                 center: [-73.9489, 40.8366],
                 zoom: 14.00,
