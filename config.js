@@ -96,7 +96,7 @@ var config = {
             hidden: false,
             //title: '',
             //image: './images/002_topographical_history.jpg',
-            description: 'At its heart3 runs the <a href="https://www.traillink.com/trail/hudson-river-greenway/">Hudson River Greenway</a>, which extends all the way to Manhattan\'s southern tip at The Battery.',
+            description: 'At its heart runs the <a href="https://www.traillink.com/trail/hudson-river-greenway/">Hudson River Greenway</a>, which extends all the way to Manhattan\'s southern tip at The Battery.',
             location: {
                 center: [-73.9489, 40.8366],
                 zoom: 13.00,
